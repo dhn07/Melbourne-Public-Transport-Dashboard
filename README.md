@@ -1,6 +1,6 @@
 ### Melbourne Public Transport - Dashboard 
 
-##### Introduction
+#### Introduction
 
 In this project I aimed to create a useful dashboard that users could interact with. My goal is to make something which users find easy to engage with and enjoy using.
 This dashboard aims to provide an analysis of daily passenger trends across different transport modes over time. By aggregating and visualising key metrics, such as total passengers, average monthly ridership and mode-specific trends, this dashboard offers valuable insights into passenger flow patterns. Users can filter data by date and time, transport mode, and day type to visualise and uncover trends. 
@@ -9,9 +9,9 @@ The dataset was provided by the [Department of Transport and Planning](https://w
 
 Dashboard:
 
-![alt text](train_default-1.png)
+![train_default-1](https://github.com/user-attachments/assets/9eb60ec9-a71d-4a44-887f-d3173a331505)
 
-##### Key Insights
+#### Key Insights
 
 Using my own dashboard I was able to gather some clear insights:
 
@@ -25,29 +25,29 @@ These insights were derived very quickly so are mostly surface level, the idea b
 
 ---
 
-##### Line Graph Visual
+#### Line Graph Visual
 
 The visual that stands out as it is the largest and most prominent is the line graph for the number of passengers over time. It shows the fluctuation in the number of passengers clearly which guide users to areas to investigate further to derive key insights. It can also show more than one mode of transport at once depending on the user's selection on the slicers. Below I selected Metro Bus and Regional Bus to compare them both.
 
-![alt text](image.png)
+![image](https://github.com/user-attachments/assets/473a4366-514c-4e20-a75d-f967ee2aabfa)
 
-![alt text](image-2.png)
+![image-2](https://github.com/user-attachments/assets/4daebcd4-1b98-4618-bdfa-297457e9ce43)
 
 ---
 
-##### Pie Graph Visual
+#### Pie Graph Visual
 
-![alt text](image-5.png)
+![image-5](https://github.com/user-attachments/assets/e1d037a6-5210-4a73-bda6-41bdd046ae77)
+
 Type of day was another variable inside the dataset. I chose to display it through this pie chart with proportions. Each section of the Piechart can be clicked and interacted with which filters the entire dashboard with that type of day just like the slicer. It greys out the other non-selected sections of the pie chart when this occurs. In future this variable and visual could be explored further if need be. 
 
-![alt text](image-4.png)
-
+![image-4](https://github.com/user-attachments/assets/8891ac69-73d7-4139-bcc4-c98721dbfe01)
 
 ---
 
-##### Headline Metrics & Measures
+#### Headline Metrics & Measures
 
-![alt text](key_metrics-1.png)
+![key_metrics-1](https://github.com/user-attachments/assets/b85277bd-ce58-49cd-84f3-2813b1fc407a)
 
 At the top of the dashboard, I have put six metrics which change based on the selections on the page. 
 
@@ -55,7 +55,7 @@ Whilst they appear as simple measures, DAX code was required to produce them and
 
 See the DAX code below to determine the busiest month accurately:
 
-```DAX
+```Javascript
 Busiest Month and Year = 
 VAR MonthlyTotals =
     SUMMARIZE(
@@ -81,22 +81,23 @@ RETURN
 
 Even though the dataset contained a month and year column, in order for the date and time to display correctly and chronologically, I needed to add a new column with the following code based on those two columns:
 
-```DAX
+```Javascript
 YearMonth = FORMAT(DATE([Year], [Month], 1), "YYYY-MM")
 ```
 
 ---
 
-##### Slicers
+#### Slicers
 
 Slicers are the key to user interactivity. I added three slicers, one for mode of transport, date selection and type of day. The reasoning for this is that it allows users to drill down further themselves and gather their own insights. I believe that this is a key strength of dashboards and PowerBI generally seems to handle them very well. 
-![alt text](slicers2-1.png)
+
+![slicers2-1](https://github.com/user-attachments/assets/d658d72f-15b6-4aa5-a631-a04c8d0c20cc)
 
 ---
 
-##### Conclusion
+#### Conclusion
 
-![alt text](image-1.png)
+![image-1](https://github.com/user-attachments/assets/7f2afb41-9c15-4d14-ae29-08c7c12fe082)
 
 I had a great time with this dashboard. I felt this project struck the right balance between utility and accessibility.
 I learnt a lot more about PowerBI and its nuances. I ran into data aggregation issues, DAX syntax and measure errors. 
